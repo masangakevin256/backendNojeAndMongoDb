@@ -1,10 +1,10 @@
 const {MongoClient} = require("mongodb");
 
-const uri = "mongodb://localhost:27017/UsersDb";
+
 let dbConnection;
 module.exports ={
     connectToDb: (cb)=> {
-        MongoClient.connect(uri)
+        MongoClient.connect(process.env.USERS_URI)
         .then((client) => {
             dbConnection = client.db();
             console.log("Mongodb for users connected")
