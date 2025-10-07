@@ -17,7 +17,7 @@ app.use(logger)
 // built in middlewares
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(cors(corsOption))
+// app.use(cors(corsOption))
 //routes
 
 app.use("/login", require("./routes/login"));
